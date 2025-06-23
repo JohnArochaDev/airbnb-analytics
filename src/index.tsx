@@ -11,7 +11,7 @@ root.render(
     <GlobalStyles
       styles={{
         body: { margin: 0 },
-        "#root": { minHeight: "100vh", backgroundColor: "#101827" },
+        "#root": { minHeight: "100vh", backgroundColor: "rgb(17 24 39)" },
       }}
     />
     <App />

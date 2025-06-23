@@ -45,7 +45,7 @@ export const Navbar: FC = () => {
               display: { xs: "none", md: "flex" },
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "rgb(0 104 139 / var(--tw-text-opacity, 1))",
+              color: "rgb(0 104 139)",
               textDecoration: "none",
               height: "100%", // needed so it centers vertically
               alignItems: "center",
@@ -54,7 +54,7 @@ export const Navbar: FC = () => {
             AirBnb Analytics
           </Typography>
 
-          {/* This pushed between the tw oelements and pushes them to the side */}
+          {/* This pushed between the two elements and pushes them to the side */}
           <Box
             sx={{
               flexGrow: 1,
