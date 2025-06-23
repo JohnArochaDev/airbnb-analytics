@@ -18,10 +18,7 @@ export const DashboardPage: FC = () => {
     { page: PageTypes.CRMManagement, component: <CrmManagementGrid /> },
     { page: PageTypes.ProfileSettings, component: <ProfileSettingsGrid /> },
     { page: PageTypes.PropertySearch, component: <PropertySearchGrid /> },
-    {
-      page: PageTypes.PropertyStatistics,
-      component: <PropertyStatisticsGrid />,
-    },
+    { page: PageTypes.PropertyStatistics, component: <PropertyStatisticsGrid /> },
   ];
 
   const current = pageComponents.find((p) => p.page === currentPage);
