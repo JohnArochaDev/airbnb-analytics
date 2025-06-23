@@ -19,8 +19,8 @@ import GroupsRoundedIcon from "@mui/icons-material/GroupsRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 
-import { StyledListItemButton } from "../../StyledListItemButton";
-import { StyledDrawer } from "../../StyledDrawer";
+import { StyledListItemButton } from "../../StyledComponents/StyledListItemButton";
+import { StyledDrawer } from "../../StyledComponents/StyledDrawer";
 
 export const SideBar: FC = () => {
   const drawrWidth = 280;
