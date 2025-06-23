@@ -1,12 +1,11 @@
 import { FC } from "react";
-
-import { TextField } from "@mui/material";
 import { StyledCard } from "../../StyledComponents/StyledCard";
+import { StyledInput } from "../../StyledComponents/StyledInput";
 
 export const FilterCard: FC = () => {
   return (
-    <StyledCard>
-      <TextField />
+    <StyledCard sx={{ p: 3 }}>
+      <StyledInput placeholder="Enter city, state..." label="Location" />
     </StyledCard>
   );
 };
