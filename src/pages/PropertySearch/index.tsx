@@ -2,12 +2,12 @@ import { Box, Grid } from "@mui/material";
 import { FC } from "react";
 
 import { drawrWidth } from "../../utils/types";
+import { FilterCard } from "../../components/Dashboard/FilterCard";
 
 export const PropertySearchGrid: FC = () => {
   return (
     <Box
       sx={{
-        border: "5px solid #fff",
         boxSizing: "border-box",
         flex: 1,
         height: "100%",
@@ -15,7 +15,13 @@ export const PropertySearchGrid: FC = () => {
         p: 2,
       }}
     >
-      <Grid container spacing={2}>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          display: "grid",
+        }}
+      >
         <Grid
           sx={{
             xs: 12,
@@ -23,7 +29,7 @@ export const PropertySearchGrid: FC = () => {
             md: 12,
           }}
         >
-          <Box sx={{ background: "#222", height: 120, borderRadius: 2 }} />
+          <FilterCard />
         </Grid>
       </Grid>
     </Box>
