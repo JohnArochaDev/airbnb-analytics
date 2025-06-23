@@ -1,11 +1,9 @@
-import { Navbar } from "./components/Dashboard/Navbar/index";
-import { SideBar } from "./components/Dashboard/SideBar";
+import { HomeDashboard } from "./pages/HomeDashboard";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <SideBar />
+      <HomeDashboard />
     </>
   );
 }
