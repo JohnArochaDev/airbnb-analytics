@@ -12,3 +12,5 @@ export enum PageTypes {
     PropertySearch = "Property Search",
     ProfileSettings = "Profile Settings"
 }
+
+export const drawrWidth = 280;

@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import MuiDrawer, { drawerClasses } from "@mui/material/Drawer";
 
-const drawrWidth = 280;
+import { drawrWidth } from "../../../utils/types";
 
 export const StyledDrawer = styled(MuiDrawer)(({ theme }) => ({
   width: drawrWidth,
