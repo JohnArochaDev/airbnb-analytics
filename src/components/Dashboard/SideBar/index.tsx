@@ -66,7 +66,18 @@ export const SideBar: FC = () => {
                   <ListItemIcon sx={{ color: "#D5C9BE" }}>
                     {item.icon}
                   </ListItemIcon>
-                  <ListItemText primary={item.text} sx={{ color: "#D5C9BE" }} />
+                  <ListItemText
+                    primary={item.text}
+                    sx={{
+                      color: "#D5C9BE",
+                      "& .MuiListItemText-primary": {
+                        fontWeight: 700,
+                        fontSize: "1.05rem",
+                        letterSpacing: "0.02em",
+                        marginLeft: -2
+                      },
+                    }}
+                  />
                 </StyledListItemButton>
               </ListItem>
             ))}

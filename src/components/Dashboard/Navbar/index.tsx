@@ -43,10 +43,9 @@ export const Navbar: FC = () => {
               ml: 4,
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "#00688B",
+              color: "rgb(0 104 139 / var(--tw-text-opacity, 1))",
               textDecoration: "none",
               height: "100%", // needed so it centers vertically
               alignItems: "center",
