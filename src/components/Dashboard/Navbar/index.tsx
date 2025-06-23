@@ -5,12 +5,10 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -26,33 +24,34 @@ export const Navbar: FC = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: '#1F2937', minHeight: '5rem', borderBottom: '1px solid #D3D3D3' }} >
       <Container maxWidth={false} disableGutters>
-        <Toolbar disableGutters sx={{ px: 2 }}>
+        <Toolbar sx={{ px: 2, height: '5rem', alignItems: 'center', display: 'flex' }}>
           <Typography
             variant="h6"
             noWrap
             sx={{
+              ml: 4,
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#00688B',
               textDecoration: 'none',
+              height: '100%', // needed so it centers vertically
+              alignItems: 'center',
             }}
           >
             AirBnb Analytics
           </Typography>
-
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           
           {/* This pushed between the tw oelements and pushes them to the side */}
-          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ flexGrow: 1, height: '100%', display: 'flex', alignItems: 'center' }} />
           
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0, height: '100%', display: 'flex', alignItems: 'center', mr: 4 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, height: '100%', display: 'flex', alignItems: 'center' }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
