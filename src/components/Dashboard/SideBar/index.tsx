@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { ListOptions } from "../../../utils/types";
+import { usePage } from "../../../context/PageContext";
 
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -20,14 +20,17 @@ import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 
 import { StyledListItemButton } from "../../StyledComponents/StyledListItemButton";
 import { StyledDrawer } from "../../StyledComponents/StyledDrawer";
+import { ListOptions, PageTypes } from "../../../utils/types";
 
 export const SideBar: FC = () => {
+  const { currentPage, setCurrentPage } = usePage();
+
   const pages: ListOptions[] = [
-    { text: "Dashboard", icon: <TimelineRoundedIcon /> },
-    { text: "Property Statistics", icon: <MapsHomeWorkRoundedIcon /> },
-    { text: "CRM Management", icon: <GroupsRoundedIcon /> },
-    { text: "Property Search", icon: <LocationOnRoundedIcon /> },
-    { text: "Profile Settings", icon: <SettingsRoundedIcon /> },
+    { text: PageTypes.Dashboard, icon: <TimelineRoundedIcon /> },
+    { text: PageTypes.PropertyStatistics, icon: <MapsHomeWorkRoundedIcon /> },
+    { text: PageTypes.CRMManagement, icon: <GroupsRoundedIcon /> },
+    { text: PageTypes.PropertySearch, icon: <LocationOnRoundedIcon /> },
+    { text: PageTypes.ProfileSettings, icon: <SettingsRoundedIcon /> },
   ];
 
   return (
@@ -45,7 +48,10 @@ export const SideBar: FC = () => {
           <List>
             {pages.map((item) => (
               <ListItem>
-                <StyledListItemButton>
+                <StyledListItemButton
+                  selected={currentPage === item.text}
+                  onClick={() => setCurrentPage(item.text)}
+                >
                   <ListItemIcon sx={{ color: "#D5C9BE" }}>
                     {item.icon}
                   </ListItemIcon>

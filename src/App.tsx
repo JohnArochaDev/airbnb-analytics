@@ -1,9 +1,13 @@
+import { PageProvider } from "./context/PageContext";
+
 import { HomeDashboard } from "./pages/HomeDashboard";
 
 function App() {
   return (
     <>
-      <HomeDashboard />
+      <PageProvider>
+        <HomeDashboard />
+      </PageProvider>
     </>
   );
 }
