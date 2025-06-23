@@ -47,7 +47,7 @@ export const SideBar: FC = () => {
         <Stack>
           <List>
             {pages.map((item) => (
-              <ListItem>
+              <ListItem key={item.text}>
                 <StyledListItemButton
                   selected={currentPage === item.text}
                   onClick={() => setCurrentPage(item.text)}
