@@ -2,7 +2,6 @@ import { FC } from "react";
 
 import { ListOptions } from "../../../utils/types";
 
-import { drawerClasses } from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import {
@@ -23,7 +22,6 @@ import { StyledListItemButton } from "../../StyledComponents/StyledListItemButto
 import { StyledDrawer } from "../../StyledComponents/StyledDrawer";
 
 export const SideBar: FC = () => {
-  const drawrWidth = 280;
   const pages: ListOptions[] = [
     { text: "Dashboard", icon: <TimelineRoundedIcon /> },
     { text: "Property Statistics", icon: <MapsHomeWorkRoundedIcon /> },
@@ -33,22 +31,7 @@ export const SideBar: FC = () => {
   ];
 
   return (
-    <StyledDrawer
-      variant="permanent"
-      sx={{
-        display: { xs: "none", md: "block" },
-        [`& .${drawerClasses.paper}`]: {
-          backgroundColor: "#1F2937",
-          top: "5rem", // Offset equal to Navbar height
-          height: "calc(100% - 5rem)",
-          width: drawrWidth,
-          minWidth: drawrWidth,
-          maxWidth: drawrWidth,
-          borderTop: "1px solid #D3D3D3",
-          borderRight: "1px solid #D3D3D3",
-        },
-      }}
-    >
+    <StyledDrawer variant="permanent">
       <Divider />
       <Box
         sx={{
@@ -74,7 +57,7 @@ export const SideBar: FC = () => {
                         fontWeight: 700,
                         fontSize: "1.05rem",
                         letterSpacing: "0.02em",
-                        marginLeft: -2
+                        marginLeft: -2,
                       },
                     }}
                   />
