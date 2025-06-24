@@ -4,6 +4,7 @@ import { FC } from "react";
 import { drawrWidth } from "../../utils/types";
 import { FilterCard } from "../../components/Dashboard/FilterCard";
 import { StyledCard } from "../../components/StyledComponents/StyledCard";
+import { MapCard } from "../../components/Dashboard/MapCard";
 
 export const PropertySearchGrid: FC = () => {
   return (
@@ -103,7 +104,7 @@ export const PropertySearchGrid: FC = () => {
               minHeight: "45vh",
             }}
           >
-            <StyledCard />
+            <MapCard />
           </Grid>
           <Grid
             sx={{
