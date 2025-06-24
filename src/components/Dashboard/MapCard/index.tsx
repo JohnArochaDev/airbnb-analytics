@@ -45,6 +45,14 @@ export const MapCard: FC = () => {
           }
         `}
       </style>
+      {/* Bright Version */}
+      {/* <style>
+        {`
+          .map-tiles {
+            filter: brightness(100%) contrast(100%) saturate(100%);
+          }
+        `}
+      </style> */}
     </StyledCard>
   );
 };
