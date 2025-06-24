@@ -41,7 +41,7 @@ export const MapCard: FC = () => {
       <style>
         {`
           .map-tiles {
-            filter: invert(100%) hue-rotate(360deg) brightness(95%) contrast(90%) saturate(80%);
+            filter: invert(100%) hue-rotate(360deg) brightness(95%) contrast(90%) saturate(70%);
           }
         `}
       </style>
