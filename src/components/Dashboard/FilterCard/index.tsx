@@ -1,8 +1,9 @@
 import { useState, FC } from "react";
 import { StyledCard } from "../../StyledComponents/StyledCard";
 import { StyledInput } from "../../StyledComponents/StyledInput";
-import { MenuItem, FormControl, InputLabel, Box, Button } from "@mui/material";
+import { MenuItem, FormControl, InputLabel, Box } from "@mui/material";
 import { StyledSelect } from "../../StyledComponents/StyledSelect";
+import { StyledButton } from "../../StyledComponents/StyledButton";
 
 export const FilterCard: FC = () => {
   const [propertyType, setPropertyType] = useState("");
@@ -132,13 +133,12 @@ export const FilterCard: FC = () => {
               justifyContent: "flex-end",
             }}
           >
-            <Button
+            <StyledButton
               variant="contained"
-              color="primary"
-              sx={{ height: 50, width: "100%", px: 4 }}
+              sx={{ height: 50, width: "100%", px: 4, backgroundColor: 'rgb(0 104 139)' }}
             >
               Search
-            </Button>
+            </StyledButton>
           </Box>
         </Box>
       </FormControl>
