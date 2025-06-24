@@ -13,6 +13,7 @@ export const PropertySearchGrid: FC = () => {
         boxSizing: "border-box",
         flex: 1,
         height: "100%",
+        mt: '5rem',
         ml: `${drawrWidth}px`,
         p: 2,
       }}
