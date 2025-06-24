@@ -100,7 +100,7 @@ export const PropertySearchGrid: FC = () => {
             sx={{
               flexBasis: "65%",
               pr: 1,
-              minHeight: "200px",
+              minHeight: "45vh",
             }}
           >
             <StyledCard />
@@ -109,7 +109,7 @@ export const PropertySearchGrid: FC = () => {
             sx={{
               flexBasis: "35%",
               pl: 1,
-              minHeight: "200px",
+              minHeight: "45vh",
             }}
           >
             <StyledCard />
