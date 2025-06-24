@@ -140,7 +140,7 @@ export const PropertySearchGrid: FC = () => {
             xs: 12,
             sm: 12,
             md: 12,
-            mt: 6,
+            mt: 4,
           }}
         >
           <Typography
@@ -167,18 +167,9 @@ export const PropertySearchGrid: FC = () => {
             xs: 12,
             sm: 12,
             md: 12,
-            mt: 6,
-
+            mt: 2,
           }}
         >
-          <Grid
-            sx={{
-              flex: 1,
-              minHeight: "35vh",
-            }}
-          >
-            <StyledCard />
-          </Grid>
           <Grid
             sx={{
               flex: 1,
