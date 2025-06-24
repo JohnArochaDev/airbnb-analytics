@@ -23,6 +23,7 @@ export const PropertySearchGrid: FC = () => {
           display: "grid",
         }}
       >
+        {/* Top Grid Section, Text and Filter */}
         <Grid
           sx={{
             xs: 12,
@@ -83,6 +84,7 @@ export const PropertySearchGrid: FC = () => {
         >
           <FilterCard />
         </Grid>
+        {/* Middle grid section, Map and Selected */}
         <Grid
           container
           sx={{
@@ -96,10 +98,7 @@ export const PropertySearchGrid: FC = () => {
         >
           <Grid
             sx={{
-              xs: 12,
-              md: 9,
-              flexBasis: "75%",
-              maxWidth: "75%",
+              flexBasis: "65%",
               pr: 1,
               minHeight: "200px",
             }}
@@ -108,10 +107,7 @@ export const PropertySearchGrid: FC = () => {
           </Grid>
           <Grid
             sx={{
-              xs: 12,
-              md: 3,
-              flexBasis: "25%",
-              maxWidth: "25%",
+              flexBasis: "35%",
               pl: 1,
               minHeight: "200px",
             }}
