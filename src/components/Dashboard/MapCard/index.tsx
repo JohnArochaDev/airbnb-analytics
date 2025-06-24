@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { StyledCard } from "../../StyledComponents/StyledCard";
 import L from "leaflet";
@@ -14,35 +14,13 @@ const markerIcon = new L.Icon({
 });
 
 export const MapCard: FC = () => {
-  const [center, setCenter] = useState<[number, number]>([38.83772130989119, -104.81939388855676]);
-  const [searchQuery, setSearchQuery] = useState<string>("");
+  // const [center, setCenter] = useState<[number, number]>([38.83772130989119, -104.81939388855676]);
 
-  const handleSearch = async () => {
-    try {
-      const response = await fetch(
-        `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(searchQuery)}&format=json&limit=1`
-      );
-      const data = await response.json();
-      if (data.length > 0) {
-        const { lat, lon } = data[0];
-        setCenter([parseFloat(lat), parseFloat(lon)]);
-      }
-    } catch (error) {
-      console.error("Geocoding error:", error);
-    }
-  };
+  const center: [number, number] = [38.83772130989119, -104.81939388855676]
+
 
   return (
     <StyledCard>
-      <div style={{ marginBottom: "10px" }}>
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search for a place"
-        />
-        <button onClick={handleSearch}>Search</button>
-      </div>
       <MapContainer
         center={center}
         zoom={13}
@@ -56,7 +34,7 @@ export const MapCard: FC = () => {
         />
         <Marker position={center} icon={markerIcon}>
           <Popup>
-            Searched location: {searchQuery || "A place"}. <br /> Easily customizable.
+            Searched location: {"A place"}. <br /> Easily customizable.
           </Popup>
         </Marker>
       </MapContainer>
