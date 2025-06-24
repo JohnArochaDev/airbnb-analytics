@@ -1,0 +1,1 @@
+1. Look into either paying for a map subscription that allows addresses, or a geolocation service that turns addresses into coords. which is cheaper?

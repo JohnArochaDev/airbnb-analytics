@@ -85,7 +85,7 @@ export const PropertySearchGrid: FC = () => {
         >
           <FilterCard />
         </Grid>
-        {/* Middle grid section, Map and Selected */}
+        {/* Middle grid section, Map and Two Stacked Cards */}
         <Grid
           container
           sx={{
@@ -101,16 +101,104 @@ export const PropertySearchGrid: FC = () => {
             sx={{
               flexBasis: "65%",
               pr: 1,
-              minHeight: "45vh",
+              minHeight: "60vh",
             }}
           >
             <MapCard />
           </Grid>
           <Grid
+            container
             sx={{
               flexBasis: "35%",
               pl: 1,
-              minHeight: "45vh",
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+            }}
+          >
+            <Grid
+              sx={{
+                flex: 1,
+                minHeight: "35vh",
+              }}
+            >
+              <StyledCard />
+            </Grid>
+            <Grid
+              sx={{
+                flex: 1,
+                minHeight: "25vh",
+              }}
+            >
+              <StyledCard />
+            </Grid>
+          </Grid>
+        </Grid>
+        {/* Available properties grid */}
+        <Grid
+          sx={{
+            xs: 12,
+            sm: 12,
+            md: 12,
+            mt: 6,
+          }}
+        >
+          <Typography
+            variant="h6"
+            noWrap
+            sx={{
+              ml: 2,
+              display: { xs: "none", md: "flex" },
+              fontWeight: 600,
+              letterSpacing: ".1rem",
+              color: "#D3D3D3",
+              textDecoration: "none",
+              height: "100%",
+              alignItems: "center",
+            }}
+          >
+            Available Properties
+          </Typography>
+        </Grid>
+        {/* Property Options Grid */}
+        <Grid
+          container
+          sx={{
+            xs: 12,
+            sm: 12,
+            md: 12,
+            mt: 6,
+
+          }}
+        >
+          <Grid
+            sx={{
+              flex: 1,
+              minHeight: "35vh",
+            }}
+          >
+            <StyledCard />
+          </Grid>
+          <Grid
+            sx={{
+              flex: 1,
+              minHeight: "35vh",
+            }}
+          >
+            <StyledCard />
+          </Grid>
+          <Grid
+            sx={{
+              flex: 1,
+              minHeight: "35vh",
+            }}
+          >
+            <StyledCard />
+          </Grid>
+          <Grid
+            sx={{
+              flex: 1,
+              minHeight: "35vh",
             }}
           >
             <StyledCard />
