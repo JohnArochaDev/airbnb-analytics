@@ -6,5 +6,6 @@ export const StyledButton = styled(Button)(() => ({
   width: "100%",
   height: 5,
   px: 4,
+  color: '#D3D3D3',
   backgroundColor: 'rgb(0 104 139)'
 }));
