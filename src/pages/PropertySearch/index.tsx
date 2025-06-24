@@ -3,6 +3,7 @@ import { FC } from "react";
 
 import { drawrWidth } from "../../utils/types";
 import { FilterCard } from "../../components/Dashboard/FilterCard";
+import { StyledCard } from "../../components/StyledComponents/StyledCard";
 
 export const PropertySearchGrid: FC = () => {
   return (
@@ -39,7 +40,7 @@ export const PropertySearchGrid: FC = () => {
               letterSpacing: ".1rem",
               color: "#D3D3D3",
               textDecoration: "none",
-              height: "100%", // needed so it centers vertically
+              height: "100%",
               alignItems: "center",
             }}
           >
@@ -63,7 +64,7 @@ export const PropertySearchGrid: FC = () => {
               letterSpacing: ".1rem",
               color: "#D3D3D3",
               textDecoration: "none",
-              height: "100%", // needed so it centers vertically
+              height: "100%",
               alignItems: "center",
             }}
           >
@@ -77,10 +78,46 @@ export const PropertySearchGrid: FC = () => {
             md: 12,
             mt: 2.5,
             ml: 2,
-            mr: 2
+            mr: 2,
           }}
         >
           <FilterCard />
+        </Grid>
+        <Grid
+          container
+          sx={{
+            xs: 12,
+            mt: 2.5,
+            ml: 2,
+            mr: 2,
+            flexWrap: "nowrap",
+            flex: 1,
+          }}
+        >
+          <Grid
+            sx={{
+              xs: 12,
+              md: 9,
+              flexBasis: "75%",
+              maxWidth: "75%",
+              pr: 1,
+              minHeight: "200px",
+            }}
+          >
+            <StyledCard />
+          </Grid>
+          <Grid
+            sx={{
+              xs: 12,
+              md: 3,
+              flexBasis: "25%",
+              maxWidth: "25%",
+              pl: 1,
+              minHeight: "200px",
+            }}
+          >
+            <StyledCard />
+          </Grid>
         </Grid>
       </Grid>
     </Box>
